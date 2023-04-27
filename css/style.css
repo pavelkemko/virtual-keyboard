@@ -1,0 +1,78 @@
+/*!FONTS***************************************************************/
+
+@font-face {
+  font-display: swap;
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../assets/fonts/roboto-mono-v22-latin-regular.eot');
+  src: url('../assets/fonts/roboto-mono-v22-latin-regular.eot?#iefix') format('embedded-opentype'),
+       url('../assets/fonts/roboto-mono-v22-latin-regular.woff2') format('woff2'),
+       url('../assets/fonts/roboto-mono-v22-latin-regular.woff') format('woff'),
+       url('../assets/fonts/roboto-mono-v22-latin-regular.ttf') format('truetype'),
+       url('../assets/fonts/roboto-mono-v22-latin-regular.svg#RobotoMono') format('svg');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../assets/fonts/roboto-mono-v22-latin-600.eot');
+  src: url('../assets/fonts/roboto-mono-v22-latin-600.eot?#iefix') format('embedded-opentype'),
+       url('../assets/fonts/roboto-mono-v22-latin-600.woff2') format('woff2'),
+       url('../assets/fonts/roboto-mono-v22-latin-600.woff') format('woff'),
+       url('../assets/fonts/roboto-mono-v22-latin-600.ttf') format('truetype'),
+       url('../assets/fonts/roboto-mono-v22-latin-600.svg#RobotoMono') format('svg');
+}
+
+/*!MAIN STYLES***************************************************************/
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  background-color: #f1f1f14f;
+}
+
+body {
+  font-family: 'Roboto Mono', monospace;
+}
+
+.main {
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 30px;
+  margin: 20px auto;
+  text-align: center;
+  max-width: 370px;
+}
+
+.textarea {
+  display: block;
+  margin: 20px auto;
+  padding: 10px;
+  width: 700px;
+  height: 200px;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: inherit;
+}
+
+.description {
+  margin: 10px auto;
+  text-align: center;
+}
+
+/*!KEYBOARD STYLES***********************************************************/
+
+.keyboard {
+  width: 700px;
+  height: 250px;
+  margin: 0px auto;
+  padding: 5px;
+  border: 3px solid #000000;
+  border-radius: 3px;
+  background-color:#b6bcc3;
+}
