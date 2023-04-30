@@ -1161,3 +1161,21 @@ function createButtons() {
 }
 
 createButtons();
+
+function catchKeyboardEvents() {
+  const buttons = document.querySelectorAll('.key');
+  buttons.forEach((e) => {
+    document.addEventListener('keydown', (event) => {
+      if (e.classList.contains(event.code)) {
+        e.classList.add('active');
+      }
+    });
+    document.addEventListener('keyup', (event) => {
+      if (e.classList.contains(event.code)) {
+        e.classList.remove('active');
+      }
+    });
+  });
+}
+
+catchKeyboardEvents();
