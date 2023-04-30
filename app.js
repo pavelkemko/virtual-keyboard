@@ -25,7 +25,7 @@ createMainElements();
 
 const buttons = [
   {
-    className: 'tilde',
+    className: 'Backquote',
     eng: {
       caps: '`',
       lower: '`',
@@ -42,7 +42,7 @@ const buttons = [
     },
   },
   {
-    className: 'dgOne',
+    className: 'Digit1',
     eng: {
       caps: '1',
       lower: '1',
@@ -59,7 +59,7 @@ const buttons = [
     },
   },
   {
-    className: 'dgTwo',
+    className: 'Digit2',
     eng: {
       caps: '2',
       lower: '2',
@@ -76,7 +76,7 @@ const buttons = [
     },
   },
   {
-    className: 'dgThree',
+    className: 'Digit3',
     eng: {
       caps: '3',
       lower: '3',
@@ -93,7 +93,7 @@ const buttons = [
     },
   },
   {
-    className: 'dgFour',
+    className: 'Digit4',
     eng: {
       caps: '4',
       lower: '4',
@@ -110,7 +110,7 @@ const buttons = [
     },
   },
   {
-    className: 'dgFive',
+    className: 'Digit5',
     eng: {
       caps: '5',
       lower: '5',
@@ -127,7 +127,7 @@ const buttons = [
     },
   },
   {
-    className: 'dgSix',
+    className: 'Digit6',
     eng: {
       caps: '6',
       lower: '6',
@@ -144,7 +144,7 @@ const buttons = [
     },
   },
   {
-    className: 'dgSeven',
+    className: 'Digit7',
     eng: {
       caps: '7',
       lower: '7',
@@ -161,7 +161,7 @@ const buttons = [
     },
   },
   {
-    className: 'dgEight',
+    className: 'Digit8',
     eng: {
       caps: '8',
       lower: '8',
@@ -178,7 +178,7 @@ const buttons = [
     },
   },
   {
-    className: 'dgNine',
+    className: 'Digit9',
     eng: {
       caps: '9',
       lower: '9',
@@ -195,7 +195,7 @@ const buttons = [
     },
   },
   {
-    className: 'dgZero',
+    className: 'Digit0',
     eng: {
       caps: '0',
       lower: '0',
@@ -212,7 +212,7 @@ const buttons = [
     },
   },
   {
-    className: 'minus',
+    className: 'Minus',
     eng: {
       caps: '-',
       lower: '-',
@@ -229,7 +229,7 @@ const buttons = [
     },
   },
   {
-    className: 'equal',
+    className: 'Equal',
     eng: {
       caps: '=',
       lower: '=',
@@ -246,7 +246,7 @@ const buttons = [
     },
   },
   {
-    className: 'backspace',
+    className: 'Backspace',
     eng: {
       caps: 'Backspace',
       lower: 'Backspace',
@@ -263,7 +263,7 @@ const buttons = [
     },
   },
   {
-    className: 'tab',
+    className: 'Tab',
     eng: {
       caps: 'Tab',
       lower: 'Tab',
@@ -280,7 +280,7 @@ const buttons = [
     },
   },
   {
-    className: 'letterQ',
+    className: 'KeyQ',
     eng: {
       caps: 'Q',
       lower: 'q',
@@ -297,7 +297,7 @@ const buttons = [
     },
   },
   {
-    className: 'letterW',
+    className: 'KeyW',
     eng: {
       caps: 'W',
       lower: 'w',
@@ -314,7 +314,7 @@ const buttons = [
     },
   },
   {
-    className: 'letterE',
+    className: 'KeyE',
     eng: {
       caps: 'E',
       lower: 'e',
@@ -331,7 +331,7 @@ const buttons = [
     },
   },
   {
-    className: 'letterR',
+    className: 'KeyR',
     eng: {
       caps: 'R',
       lower: 'r',
@@ -348,7 +348,7 @@ const buttons = [
     },
   },
   {
-    className: 'letterT',
+    className: 'KeyT',
     eng: {
       caps: 'T',
       lower: 't',
@@ -365,7 +365,7 @@ const buttons = [
     },
   },
   {
-    className: 'letterY',
+    className: 'KeyY',
     eng: {
       caps: 'Y',
       lower: 'y',
@@ -382,7 +382,7 @@ const buttons = [
     },
   },
   {
-    className: 'letterU',
+    className: 'KeyU',
     eng: {
       caps: 'U',
       lower: 'u',
@@ -399,7 +399,7 @@ const buttons = [
     },
   },
   {
-    className: 'letterI',
+    className: 'KeyI',
     eng: {
       caps: 'I',
       lower: 'i',
@@ -416,7 +416,7 @@ const buttons = [
     },
   },
   {
-    className: 'letterO',
+    className: 'KeyO',
     eng: {
       caps: 'O',
       lower: 'o',
@@ -433,7 +433,7 @@ const buttons = [
     },
   },
   {
-    className: 'letterP',
+    className: 'KeyP',
     eng: {
       caps: 'P',
       lower: 'p',
@@ -450,7 +450,7 @@ const buttons = [
     },
   },
   {
-    className: 'bracketOpen',
+    className: 'BracketLeft',
     eng: {
       caps: '[',
       lower: '[',
@@ -467,7 +467,7 @@ const buttons = [
     },
   },
   {
-    className: 'bracketClose',
+    className: 'BracketRight',
     eng: {
       caps: ']',
       lower: ']',
@@ -484,7 +484,7 @@ const buttons = [
     },
   },
   {
-    className: 'backslash',
+    className: 'Backslash',
     eng: {
       caps: '\\',
       lower: '\\',
@@ -501,7 +501,7 @@ const buttons = [
     },
   },
   {
-    className: 'delete',
+    className: 'Delete',
     eng: {
       caps: 'Del',
       lower: 'Del',
@@ -518,7 +518,7 @@ const buttons = [
     },
   },
   {
-    className: 'capsLock',
+    className: 'CapsLock',
     eng: {
       caps: 'CapsLock',
       lower: 'CapsLock',
@@ -535,7 +535,7 @@ const buttons = [
     },
   },
   {
-    className: 'letterA',
+    className: 'KeyA',
     eng: {
       caps: 'A',
       lower: 'a',
@@ -552,7 +552,7 @@ const buttons = [
     },
   },
   {
-    className: 'letterS',
+    className: 'KeyS',
     eng: {
       caps: 'S',
       lower: 's',
@@ -569,7 +569,7 @@ const buttons = [
     },
   },
   {
-    className: 'letterD',
+    className: 'KeyD',
     eng: {
       caps: 'D',
       lower: 'd',
@@ -586,7 +586,7 @@ const buttons = [
     },
   },
   {
-    className: 'letterF',
+    className: 'KeyF',
     eng: {
       caps: 'F',
       lower: 'f',
@@ -603,7 +603,7 @@ const buttons = [
     },
   },
   {
-    className: 'letterG',
+    className: 'KeyG',
     eng: {
       caps: 'G',
       lower: 'g',
@@ -620,7 +620,7 @@ const buttons = [
     },
   },
   {
-    className: 'letterH',
+    className: 'KeyH',
     eng: {
       caps: 'H',
       lower: 'h',
@@ -637,7 +637,7 @@ const buttons = [
     },
   },
   {
-    className: 'letterJ',
+    className: 'KeyJ',
     eng: {
       caps: 'J',
       lower: 'j',
@@ -654,7 +654,7 @@ const buttons = [
     },
   },
   {
-    className: 'letterK',
+    className: 'KeyK',
     eng: {
       caps: 'K',
       lower: 'k',
@@ -671,7 +671,7 @@ const buttons = [
     },
   },
   {
-    className: 'letterL',
+    className: 'KeyL',
     eng: {
       caps: 'L',
       lower: 'l',
@@ -688,7 +688,7 @@ const buttons = [
     },
   },
   {
-    className: 'semicolon',
+    className: 'Semicolon',
     eng: {
       caps: ';',
       lower: ';',
@@ -705,7 +705,7 @@ const buttons = [
     },
   },
   {
-    className: 'quote',
+    className: 'Quote',
     eng: {
       caps: '\'',
       lower: '\'',
@@ -722,7 +722,7 @@ const buttons = [
     },
   },
   {
-    className: 'enter',
+    className: 'Enter',
     eng: {
       caps: 'Enter',
       lower: 'Enter',
@@ -739,7 +739,7 @@ const buttons = [
     },
   },
   {
-    className: 'leftShift',
+    className: 'ShiftLeft',
     eng: {
       caps: 'Shift',
       lower: 'Shift',
@@ -756,7 +756,7 @@ const buttons = [
     },
   },
   {
-    className: 'letterZ',
+    className: 'KeyZ',
     eng: {
       caps: 'Z',
       lower: 'z',
@@ -773,7 +773,7 @@ const buttons = [
     },
   },
   {
-    className: 'letterX',
+    className: 'KeyX',
     eng: {
       caps: 'X',
       lower: 'x',
@@ -790,7 +790,7 @@ const buttons = [
     },
   },
   {
-    className: 'letterC',
+    className: 'KeyC',
     eng: {
       caps: 'C',
       lower: 'c',
@@ -807,7 +807,7 @@ const buttons = [
     },
   },
   {
-    className: 'letterV',
+    className: 'KeyV',
     eng: {
       caps: 'V',
       lower: 'v',
@@ -824,7 +824,7 @@ const buttons = [
     },
   },
   {
-    className: 'letterB',
+    className: 'KeyB',
     eng: {
       caps: 'B',
       lower: 'b',
@@ -841,7 +841,7 @@ const buttons = [
     },
   },
   {
-    className: 'letterN',
+    className: 'KeyN',
     eng: {
       caps: 'N',
       lower: 'n',
@@ -858,7 +858,7 @@ const buttons = [
     },
   },
   {
-    className: 'letterM',
+    className: 'KeyM',
     eng: {
       caps: 'M',
       lower: 'm',
@@ -875,7 +875,7 @@ const buttons = [
     },
   },
   {
-    className: 'comma',
+    className: 'Comma',
     eng: {
       caps: ',',
       lower: ',',
@@ -892,7 +892,7 @@ const buttons = [
     },
   },
   {
-    className: 'dot',
+    className: 'Period',
     eng: {
       caps: '.',
       lower: '.',
@@ -909,7 +909,7 @@ const buttons = [
     },
   },
   {
-    className: 'slash',
+    className: 'Slash',
     eng: {
       caps: '/',
       lower: '/',
@@ -926,7 +926,7 @@ const buttons = [
     },
   },
   {
-    className: 'arrowUp',
+    className: 'ArrowUp',
     eng: {
       caps: '▲',
       lower: '▲',
@@ -943,7 +943,7 @@ const buttons = [
     },
   },
   {
-    className: 'rightShift',
+    className: 'ShiftRight',
     eng: {
       caps: 'Shift',
       lower: 'Shift',
@@ -960,7 +960,7 @@ const buttons = [
     },
   },
   {
-    className: 'leftCtrl',
+    className: 'ControlLeft',
     eng: {
       caps: 'Ctrl',
       lower: 'Ctrl',
@@ -977,7 +977,7 @@ const buttons = [
     },
   },
   {
-    className: 'win',
+    className: 'MetaLeft',
     eng: {
       caps: 'Win',
       lower: 'Win',
@@ -994,7 +994,7 @@ const buttons = [
     },
   },
   {
-    className: 'leftAlt',
+    className: 'AltLeft',
     eng: {
       caps: 'Alt',
       lower: 'Alt',
@@ -1011,7 +1011,7 @@ const buttons = [
     },
   },
   {
-    className: 'space',
+    className: 'Space',
     eng: {
       caps: ' ',
       lower: ' ',
@@ -1028,7 +1028,7 @@ const buttons = [
     },
   },
   {
-    className: 'rightAlt',
+    className: 'AltRight',
     eng: {
       caps: 'Alt',
       lower: 'Alt',
@@ -1045,7 +1045,7 @@ const buttons = [
     },
   },
   {
-    className: 'arrowLeft',
+    className: 'ArrowLeft',
     eng: {
       caps: '◄',
       lower: '◄',
@@ -1062,7 +1062,7 @@ const buttons = [
     },
   },
   {
-    className: 'arrowDown',
+    className: 'ArrowDown',
     eng: {
       caps: '▼',
       lower: '▼',
@@ -1079,7 +1079,7 @@ const buttons = [
     },
   },
   {
-    className: 'arrowRight',
+    className: 'ArrowRight',
     eng: {
       caps: '►',
       lower: '►',
@@ -1096,7 +1096,7 @@ const buttons = [
     },
   },
   {
-    className: 'rightCtrl',
+    className: 'ControlRight',
     eng: {
       caps: 'Ctrl',
       lower: 'Ctrl',
@@ -1118,7 +1118,7 @@ function createButtons() {
   const keyboard = document.querySelector('.keyboard');
   buttons.forEach((e) => {
     const btn = document.createElement('div');
-    btn.className = `${e.className} btn`;
+    btn.className = `${e.className} key`;
     const eng = document.createElement('span');
     eng.className = 'eng';
     const lit = document.createElement('span');
