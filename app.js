@@ -97,8 +97,8 @@ const buttons = [
     eng: {
       caps: '4',
       lower: '4',
-      upper: '#',
-      shiftCaps: '#',
+      upper: '$',
+      shiftCaps: '$',
     },
     lit: {
       caps: 'Ę',
@@ -1162,12 +1162,25 @@ function createButtons() {
 
 createButtons();
 
+const keysButtons = document.querySelectorAll('.key');
+const textAreaContent = document.querySelector('.textarea');
+
 function catchKeyboardEvents() {
-  const buttons = document.querySelectorAll('.key');
-  buttons.forEach((e) => {
+  keysButtons.forEach((e) => {
     document.addEventListener('keydown', (event) => {
       if (e.classList.contains(event.code)) {
         e.classList.add('active');
+        const arrChildren = Array.from(e.children);
+        arrChildren.forEach((i) => {
+          if (!i.classList.contains('hidden')) {
+            const arrChildrenChildren = Array.from(i.children);
+            arrChildrenChildren.forEach((k) => {
+              if (!k.classList.contains('hidden') && event.key.length < 2) {
+                textAreaContent.textContent += k.textContent;
+              }
+            });
+          }
+        });
       }
     });
     document.addEventListener('keyup', (event) => {
