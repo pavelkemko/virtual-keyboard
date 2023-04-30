@@ -1045,23 +1045,6 @@ const buttons = [
     },
   },
   {
-    className: 'rightCtrl',
-    eng: {
-      caps: 'Ctrl',
-      lower: 'Ctrl',
-      upper: 'Ctrl',
-      shiftCaps: 'Ctrl',
-    },
-    lit: {
-      caps: 'Ctrl',
-      lower: 'Ctrl',
-      upper: 'Ctrl',
-      shiftCaps: 'Ctrl',
-      alt: 'Ctrl',
-      altShift: 'Ctrl',
-    },
-  },
-  {
     className: 'arrowLeft',
     eng: {
       caps: '◄',
@@ -1133,48 +1116,48 @@ const buttons = [
 
 function createButtons() {
   const keyboard = document.querySelector('.keyboard');
-  for (let i = 0; i < buttons.length; i += 1) {
+  buttons.forEach((e) => {
     const btn = document.createElement('div');
-    btn.className = `${buttons[i].className} btn`;
+    btn.className = `${e.className} btn`;
     const eng = document.createElement('span');
     eng.className = 'eng';
     const lit = document.createElement('span');
     lit.className = 'lit hidden';
     const engCaps = document.createElement('span');
     engCaps.className = 'caps hidden';
-    engCaps.textContent = `${buttons[i].eng.caps}`;
+    engCaps.textContent = `${e.eng.caps}`;
     const engLower = document.createElement('span');
     engLower.className = 'lower';
-    engLower.textContent = `${buttons[i].eng.lower}`;
+    engLower.textContent = `${e.eng.lower}`;
     const engUpper = document.createElement('span');
     engUpper.className = 'upper hidden';
-    engUpper.textContent = `${buttons[i].eng.upper}`;
+    engUpper.textContent = `${e.eng.upper}`;
     const engShiftCaps = document.createElement('span');
     engShiftCaps.className = 'shiftCaps hidden';
-    engShiftCaps.textContent = `${buttons[i].eng.shiftCaps}`;
+    engShiftCaps.textContent = `${e.eng.shiftCaps}`;
     const litCaps = document.createElement('span');
     litCaps.className = 'caps hidden';
-    litCaps.textContent = `${buttons[i].lit.caps}`;
+    litCaps.textContent = `${e.lit.caps}`;
     const litLower = document.createElement('span');
     litLower.className = 'lower hidden';
-    litLower.textContent = `${buttons[i].lit.lower}`;
+    litLower.textContent = `${e.lit.lower}`;
     const litUpper = document.createElement('span');
     litUpper.className = 'upper hidden';
-    litUpper.textContent = `${buttons[i].lit.upper}`;
+    litUpper.textContent = `${e.lit.upper}`;
     const litShiftCaps = document.createElement('span');
     litShiftCaps.className = 'shiftCaps hidden';
-    litShiftCaps.textContent = `${buttons[i].lit.shiftCaps}`;
+    litShiftCaps.textContent = `${e.lit.shiftCaps}`;
     const litAlt = document.createElement('span');
     litAlt.className = 'alt hidden';
-    litAlt.textContent = `${buttons[i].lit.alt}`;
+    litAlt.textContent = `${e.lit.alt}`;
     const litAltShift = document.createElement('span');
     litAltShift.className = 'altShift hidden';
-    litAltShift.textContent = `${buttons[i].lit.altShift}`;
+    litAltShift.textContent = `${e.lit.altShift}`;
     eng.append(engCaps, engLower, engUpper, engShiftCaps);
     lit.append(litCaps, litLower, litUpper, litShiftCaps, litAlt, litAltShift);
     btn.append(eng, lit);
     keyboard.append(btn);
-  }
+  });
 }
 
 createButtons();

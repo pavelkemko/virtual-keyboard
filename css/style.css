@@ -31,7 +31,7 @@
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
-  background-color: #f1f1f14f;
+  background-color: lightcyan;
 }
 
 body {
@@ -76,14 +76,14 @@ span {
   margin: 0px auto;
   padding: 5px;
   border: 3px solid #000000;
-  border-radius: 3px;
+  border-radius: 10px;
   background-color:#b6bcc3;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  row-gap: 5px;
-  column-gap: 5px;
+  row-gap: 6px;
+  column-gap: 6px;
 }
 
 .btn {
@@ -93,8 +93,19 @@ span {
   height: 40px;
   width: 40px;
   color: black;
-  background-color: white;
+  background-color: rgb(251, 255, 255);
   border-radius: 5px;
+  transition: .2s;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: lightcyan;
+}
+
+.btn:active {
+  background-color: aqua;
+  border-radius: 21px;
 }
 
 .hidden {
@@ -102,9 +113,25 @@ span {
 }
 
 .backspace {
-  width: 100px;
+  width: 102px;
 }
 
-.tab {
-  width: 85px;
+.tab,
+.delete,
+.leftCtrl,
+.win,
+.leftAlt,
+.rightCtrl {
+  width: 48px;
+}
+
+.capsLock,
+.enter,
+.leftShift,
+.rightShift {
+  width: 94px;
+}
+
+.space {
+  width: 300px;
 }
