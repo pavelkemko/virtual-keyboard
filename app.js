@@ -1192,3 +1192,29 @@ function catchKeyboardEvents() {
 }
 
 catchKeyboardEvents();
+
+function enter() {
+  document.addEventListener('keydown', (event) => {
+    if (event.code === 'Enter') {
+      textAreaContent.textContent += '\n';
+    }
+  });
+}
+
+enter();
+
+function arrows() {
+  document.addEventListener('keydown', (event) => {
+    if (event.code === 'ArrowUp') {
+      textAreaContent.textContent += '▲';
+    } else if (event.code === 'ArrowLeft') {
+      textAreaContent.textContent += '◄';
+    } else if (event.code === 'ArrowDown') {
+      textAreaContent.textContent += '▼';
+    } else if (event.code === 'ArrowRight') {
+      textAreaContent.textContent += '►';
+    }
+  });
+}
+
+arrows();
