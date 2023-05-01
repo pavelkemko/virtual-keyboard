@@ -1130,7 +1130,7 @@ function createButtons() {
     engLower.className = 'engLower';
     engLower.textContent = `${e.eng.lower}`;
     const engUpper = document.createElement('span');
-    engUpper.className = 'upper hidden';
+    engUpper.className = 'engUpper hidden';
     engUpper.textContent = `${e.eng.upper}`;
     const engShiftCaps = document.createElement('span');
     engShiftCaps.className = 'shiftCaps hidden';
@@ -1142,7 +1142,7 @@ function createButtons() {
     litLower.className = 'litLower hidden';
     litLower.textContent = `${e.lit.lower}`;
     const litUpper = document.createElement('span');
-    litUpper.className = 'upper hidden';
+    litUpper.className = 'litUpper hidden';
     litUpper.textContent = `${e.lit.upper}`;
     const litShiftCaps = document.createElement('span');
     litShiftCaps.className = 'shiftCaps hidden';
@@ -1224,8 +1224,22 @@ const litContent = document.querySelectorAll('.lit');
 const engContent = document.querySelectorAll('.eng');
 const litLowerContent = document.querySelectorAll('.litLower');
 const engLowerContent = document.querySelectorAll('.engLower');
+const engUpperContent = document.querySelectorAll('.engUpper');
+const litUpperContent = document.querySelectorAll('.litUpper');
 
 function changeLanguage() {
+  if (lang === 'lit') {
+    litContent.forEach((e) => e.classList.remove('hidden'));
+    engContent.forEach((e) => e.classList.add('hidden'));
+    litLowerContent.forEach((e) => e.classList.remove('hidden'));
+    engLowerContent.forEach((e) => e.classList.add('hidden'));
+  }
+  if (lang === 'eng') {
+    litContent.forEach((e) => e.classList.add('hidden'));
+    engContent.forEach((e) => e.classList.remove('hidden'));
+    litLowerContent.forEach((e) => e.classList.add('hidden'));
+    engLowerContent.forEach((e) => e.classList.remove('hidden'));
+  }
   document.addEventListener('keydown', (event) => {
     if ((event.key === 'Alt' && event.ctrlKey) || (event.key === 'Control' && event.altKey)) {
       lang = lang === 'eng' ? 'lit' : 'eng';
@@ -1247,3 +1261,28 @@ function changeLanguage() {
 }
 
 changeLanguage();
+
+function shift() {
+  document.addEventListener('keydown', (event) => {
+    if ((event.key === 'Shift' && lang === 'lit')) {
+      litLowerContent.forEach((e) => e.classList.add('hidden'));
+      litUpperContent.forEach((e) => e.classList.remove('hidden'));
+    }
+    if ((event.key === 'Shift' && lang === 'eng')) {
+      engLowerContent.forEach((e) => e.classList.add('hidden'));
+      engUpperContent.forEach((e) => e.classList.remove('hidden'));
+    }
+  });
+  document.addEventListener('keyup', (event) => {
+    if ((event.key === 'Shift' && lang === 'lit')) {
+      litLowerContent.forEach((e) => e.classList.remove('hidden'));
+      litUpperContent.forEach((e) => e.classList.add('hidden'));
+    }
+    if ((event.key === 'Shift' && lang === 'eng')) {
+      engLowerContent.forEach((e) => e.classList.remove('hidden'));
+      engUpperContent.forEach((e) => e.classList.add('hidden'));
+    }
+  });
+}
+
+shift();
