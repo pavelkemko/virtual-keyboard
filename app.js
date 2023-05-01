@@ -68,11 +68,11 @@ const buttons = [
     },
     lit: {
       caps: 'Č',
-      lower: 'ą',
-      upper: 'Ą',
-      shiftCaps: 'ą',
-      alt: '1',
-      altShift: '!',
+      lower: 'č',
+      upper: 'Č',
+      shiftCaps: 'č',
+      alt: '2',
+      altShift: '@',
     },
   },
   {
@@ -101,10 +101,10 @@ const buttons = [
       shiftCaps: '$',
     },
     lit: {
-      caps: 'Ę',
-      lower: 'ę',
-      upper: 'Ę',
-      shiftCaps: 'ę',
+      caps: 'Ė',
+      lower: 'ė',
+      upper: 'Ė',
+      shiftCaps: 'ė',
       alt: '4',
       altShift: '$',
     },
@@ -1127,7 +1127,7 @@ function createButtons() {
     engCaps.className = 'caps hidden';
     engCaps.textContent = `${e.eng.caps}`;
     const engLower = document.createElement('span');
-    engLower.className = 'lower';
+    engLower.className = 'engLower';
     engLower.textContent = `${e.eng.lower}`;
     const engUpper = document.createElement('span');
     engUpper.className = 'upper hidden';
@@ -1139,7 +1139,7 @@ function createButtons() {
     litCaps.className = 'caps hidden';
     litCaps.textContent = `${e.lit.caps}`;
     const litLower = document.createElement('span');
-    litLower.className = 'lower hidden';
+    litLower.className = 'litLower hidden';
     litLower.textContent = `${e.lit.lower}`;
     const litUpper = document.createElement('span');
     litUpper.className = 'upper hidden';
@@ -1218,3 +1218,32 @@ function arrows() {
 }
 
 arrows();
+
+let lang = localStorage.getItem('lang') || 'eng';
+const litContent = document.querySelectorAll('.lit');
+const engContent = document.querySelectorAll('.eng');
+const litLowerContent = document.querySelectorAll('.litLower');
+const engLowerContent = document.querySelectorAll('.engLower');
+
+function changeLanguage() {
+  document.addEventListener('keydown', (event) => {
+    if ((event.key === 'Alt' && event.ctrlKey) || (event.key === 'Control' && event.altKey)) {
+      lang = lang === 'eng' ? 'lit' : 'eng';
+      localStorage.setItem('lang', lang);
+      if (lang === 'lit') {
+        litContent.forEach((e) => e.classList.remove('hidden'));
+        engContent.forEach((e) => e.classList.add('hidden'));
+        litLowerContent.forEach((e) => e.classList.remove('hidden'));
+        engLowerContent.forEach((e) => e.classList.add('hidden'));
+      }
+      if (lang === 'eng') {
+        litContent.forEach((e) => e.classList.add('hidden'));
+        engContent.forEach((e) => e.classList.remove('hidden'));
+        litLowerContent.forEach((e) => e.classList.add('hidden'));
+        engLowerContent.forEach((e) => e.classList.remove('hidden'));
+      }
+    }
+  });
+}
+
+changeLanguage();
