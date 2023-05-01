@@ -1226,6 +1226,8 @@ const litLowerContent = document.querySelectorAll('.litLower');
 const engLowerContent = document.querySelectorAll('.engLower');
 const engUpperContent = document.querySelectorAll('.engUpper');
 const litUpperContent = document.querySelectorAll('.litUpper');
+const altLit = document.querySelectorAll('.alt');
+const altShiftLit = document.querySelectorAll('.altShift');
 
 function changeLanguage() {
   if (lang === 'lit') {
@@ -1264,21 +1266,22 @@ changeLanguage();
 
 function shift() {
   document.addEventListener('keydown', (event) => {
-    if ((event.key === 'Shift' && lang === 'lit')) {
+    if (event.key === 'Shift' && !event.altKey && lang === 'lit') {
       litLowerContent.forEach((e) => e.classList.add('hidden'));
+      altShiftLit.forEach((e) => e.classList.add('hidden'));
       litUpperContent.forEach((e) => e.classList.remove('hidden'));
     }
-    if ((event.key === 'Shift' && lang === 'eng')) {
+    if (event.key === 'Shift' && lang === 'eng') {
       engLowerContent.forEach((e) => e.classList.add('hidden'));
       engUpperContent.forEach((e) => e.classList.remove('hidden'));
     }
   });
   document.addEventListener('keyup', (event) => {
-    if ((event.key === 'Shift' && lang === 'lit')) {
+    if (event.key === 'Shift' && lang === 'lit') {
       litLowerContent.forEach((e) => e.classList.remove('hidden'));
       litUpperContent.forEach((e) => e.classList.add('hidden'));
     }
-    if ((event.key === 'Shift' && lang === 'eng')) {
+    if (event.key === 'Shift' && lang === 'eng') {
       engLowerContent.forEach((e) => e.classList.remove('hidden'));
       engUpperContent.forEach((e) => e.classList.add('hidden'));
     }
@@ -1286,3 +1289,68 @@ function shift() {
 }
 
 shift();
+
+function alt() {
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Alt' && lang === 'eng') {
+      event.preventDefault();
+    }
+    if (!event.ctrlKey && event.key === 'Alt' && !event.shiftKey && lang === 'lit') {
+      event.preventDefault();
+      litLowerContent.forEach((e) => e.classList.add('hidden'));
+      litUpperContent.forEach((e) => e.classList.add('hidden'));
+      altLit.forEach((e) => e.classList.remove('hidden'));
+    }
+  });
+  document.addEventListener('keyup', (event) => {
+    if (!event.ctrlKey && event.key === 'Alt' && !event.shiftKey && lang === 'lit') {
+      litLowerContent.forEach((e) => e.classList.remove('hidden'));
+      litUpperContent.forEach((e) => e.classList.add('hidden'));
+      altLit.forEach((e) => e.classList.add('hidden'));
+    }
+  });
+}
+
+alt();
+
+function altShift() {
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Shift' && event.altKey && lang === 'lit') {
+      litLowerContent.forEach((e) => e.classList.add('hidden'));
+      litUpperContent.forEach((e) => e.classList.add('hidden'));
+      altLit.forEach((e) => e.classList.add('hidden'));
+      altShiftLit.forEach((e) => e.classList.remove('hidden'));
+    }
+  });
+  document.addEventListener('keyup', (event) => {
+    if (event.key === 'Shift' && event.altKey && lang === 'lit') {
+      litLowerContent.forEach((e) => e.classList.remove('hidden'));
+      litUpperContent.forEach((e) => e.classList.add('hidden'));
+      altLit.forEach((e) => e.classList.add('hidden'));
+      altShiftLit.forEach((e) => e.classList.add('hidden'));
+    }
+  });
+}
+
+altShift();
+
+function tab() {
+  document.addEventListener('keydown', (event) => {
+    if (event.code === 'Tab') {
+      event.preventDefault();
+      textAreaContent.textContent += '\t';
+    }
+  });
+}
+
+tab();
+
+function altKeyE() {
+  document.addEventListener('keydown', (event) => {
+    if (event.altKey && event.code === 'KeyE' && lang === 'lit') {
+      event.preventDefault();
+    }
+  });
+}
+
+altKeyE();
